@@ -1,0 +1,20 @@
+{
+  "name": "ts-unit-testing",
+  "version": "1.0.0",
+  "description": "Many existing frameworks like React, Angular already come with the preconfigured templates that enable unit testing out of the box.",
+  "main": "index.js",
+  "scripts": { "test": "jasmine" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bergenbuch/ts-unit-testing.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bergenbuch/ts-unit-testing/issues"
+  },
+  "homepage": "https://github.com/bergenbuch/ts-unit-testing#readme",
+  "devDependencies": {
+    "jasmine": "^3.6.1"
+  }
+}
