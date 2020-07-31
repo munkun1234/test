@@ -1,7 +1,7 @@
 import { TypescriptCalculator } from './typescript-calculator';
 
-describe('TypescriptCalculator', function() {
-  it('should sum', function() {
+describe('TypescriptCalculator', () => {
+  it('should sum', () => {
     // arrange
     const calculator = new TypescriptCalculator();
     var x1 = 5;
