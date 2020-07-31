@@ -4,7 +4,7 @@
   "description": "Many existing frameworks like React, Angular already come with the preconfigured templates that enable unit testing out of the box.",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "babel app --delete-dir-on-start -d \"spec/out\" app --out-dir \"spec/out\" -x \".ts\" -x \".js\" && jasmine"
   },
   "repository": {
     "type": "git",
@@ -17,13 +17,17 @@
   },
   "homepage": "https://github.com/bergenbuch/ts-unit-testing#readme",
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
+    "@babel/polyfill": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-typescript": "^7.10.4",
     "@babel/register": "^7.10.5",
-    "babel-loader": "^8.1.0",
     "jasmine": "^3.6.1",
     "ts-loader": "^8.0.1",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.5.11"
   }
 }
