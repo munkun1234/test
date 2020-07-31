@@ -33,3 +33,49 @@ Change root location of your tests in `./spec/support/jasmine.json` file from `s
 ```json
   "spec_dir": "app",
 ```
+
+Install Babel
+
+```bash
+npm install --save-dev @babel/register @babel/core babel-loader
+```
+
+Register Babel in `./spec/support/jasmine.json` and add `.ts` support as follows:
+
+```json
+{
+  "spec_dir": "app",
+  "spec_files": ["**/*[sS]pec.js", "**/*[sS]pec.ts"],
+  "helpers": ["helpers/**/*.js", "../node_modules/@babel/register/lib/node.js"],
+  "stopSpecOnExpectationFailure": false,
+  "random": true
+}
+```
+
+To configure Babel we choose `env preset` so that it supports transformations for ES2015+.
+
+```bash
+npm install @babel/preset-env --save-dev
+```
+
+... create `.babelrc` with the following setup:
+
+```json
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+Add TypeScript support to Babel.
+
+```bash
+npm install @babel/preset-typescript --save-dev
+```
+
+... and modify the `.babelrc` accordingly:
+
+```json
+{
+  "presets": ["@babel/preset-env", "@babel/preset-typescript"]
+}
+```
