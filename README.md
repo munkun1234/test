@@ -1,16 +1,19 @@
 # Simple TypeScript Unit Testing Template using Jasmine & Babel
 
-Many existing frameworks like React, Angular already come with the preconfigured templates that enable unit testing out of the box.
+Many existing frameworks like React, Angular already come with preconfigured templates that enable unit testing out of the box.
 
-This project demonstrates how to enable unit testing for your TypeScript project idependent from framework you use.
+This project demonstrates how to enable unit testing for your TypeScript project if you don't have any of those.
 
 ## Prerequisites
 
-npm should be installed for our example. Please download and install it from [here](https://www.npmjs.com/get-npm) if it's not done already.
+[npm](https://www.npmjs.com/get-npm) should be installed for our example. Please download and install it from [here](https://www.npmjs.com/get-npm) if it's not done already.
 
 ## If you'd like run the tests of this project
 
-Simply execute command line instruction `npm test` in the root of this project.
+Simply execute command line instructions in the root of this project:
+
+* `npm install`
+* `npm test`
 
 ## To configure tests in your own project
 
@@ -29,14 +32,14 @@ Set jasmine as your test script in your package.json
 "scripts": { "test": "jasmine" },
 ```
 
-Change root location of your tests in `./spec/support/jasmine.json` file from `spec` to `app` as it's where our code is stored.
+Change root location of your tests in [`./spec/support/jasmine.json`](./spec/support/jasmine.json) file from `spec` to `app` as it's where our code is stored.
 
 ```json
   "spec_dir": "app",
 ```
 
 As of now you should be able to run `npm test` and execute _javascript_ tests only.
-To see how one javascript test may look like please check this file `./app/services/calculator.spec.js`
+To see how one javascript test may look like please check this file [`./app/services/calculator.spec.js`](./app/services/calculator.spec.js)
 
 ## So now let's add a TypeScript support
 
@@ -59,7 +62,7 @@ We'd like to add ES2015+ and TypeScript tranformations.
 npm i @babel/preset-env @babel/preset-typescript --save-dev
 ```
 
-... create `.babelrc` with the following setup:
+... create [`.babelrc`](.babelrc) in the root of your project with the following setup:
 
 ```json
 {
@@ -70,7 +73,7 @@ npm i @babel/preset-env @babel/preset-typescript --save-dev
 We're going to reconfigure jasmine to lookup for spec files in under `./spec/out`.
 This folder should be created and added `.gitignore` file.
 
-Let's reflect the change in `./spec/support/jasmine.json`:
+Let's reflect the change in [`./spec/support/jasmine.json`](./spec/support/jasmine.json):
 
 ```json
 {
@@ -83,7 +86,7 @@ Let's reflect the change in `./spec/support/jasmine.json`:
 ```
 
 The last change is to tell npm what to do when we run `npm test`
-Let's open `package.json` and replace the original line
+Let's open [`package.json`](./package.json) and replace the original line
 
 ```json
 "scripts": { "test": "jasmine" }
@@ -106,7 +109,7 @@ Let's explain what we do here:
 - the second part just runs jasmine
 
 So now we just need to add our TypeScript test and see if it works.
-To see how a TypeScript test might look like just check the following file `./app/services/typescript-calculator.spec.ts`.
+To see how a TypeScript test might look like just check the following file [`./app/services/typescript-calculator.spec.ts`](./app/services/typescript-calculator.spec.ts).
 
 To run the tests just use `npm test`.
 
