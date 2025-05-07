@@ -12,5 +12,7 @@ describe('TypescriptCalculator', () => {
 
     // assert
     expect(sum).toEqual(15);
+    // calculator.sum(x1, x2);
+    calculator.sum(x1, x2);
   });
 });
