@@ -10,7 +10,7 @@ describe('Calculator', function() {
     // arrange
     var x1 = 5;
     var x2 = 10;
-
+    var unused = 100; 
     // act
     var sum = calculator.sum(x1, x2);
 
