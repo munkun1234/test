@@ -6,8 +6,7 @@ describe('TypescriptCalculator', () => {
     const calculator = new TypescriptCalculator();
     var x1 = 5;
     var x2 = 10;
-
-    // act
+    // actX
     const sum = calculator.sum(x1, x2);
 
     // assert
