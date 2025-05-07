@@ -8,7 +8,7 @@ describe('Calculator', () => {
     const x = 5;
     const y = 10;
     const z = 15;
-
+    
     // act
     const sum = calculator.sum(x, y);
 
